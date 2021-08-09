@@ -25,5 +25,6 @@ export default defineComponent({
 <style scoped lang="scss">
 .footer {
   background-color: transparent;
+  padding-bottom: 5px;
 }
 </style>

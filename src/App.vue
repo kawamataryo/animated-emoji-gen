@@ -73,13 +73,8 @@ html {
 }
 
 .body {
-  background-color: #333;
+  background-color: #efefef;
   padding-top: 60px;
-  background-image: url("/background-image.jpg");
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: lighten;
-  background-position: center 0;
-  background-size: cover;
   position: relative;
 }
 
