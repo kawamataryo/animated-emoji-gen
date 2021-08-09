@@ -20,7 +20,7 @@
         type="turbulence"
         baseFrequency="0.07 0.04"
         numOctaves="1"
-        seed="4"
+        seed="1"
         stitchTiles="stitch"
         result="turbulence"
       >
@@ -37,7 +37,7 @@
         values="1 0 0 0 0
 0 1 0 0 0
 0 0 1 0 0
-0 0 0 40 -3"
+0 0 0 60 -3"
         in="turbulence"
         result="colormatrix"
       />

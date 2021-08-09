@@ -55,7 +55,7 @@
         <feDisplacementMap
           in="composite1"
           in2="turbulence"
-          scale="17"
+          scale="30"
           xChannelSelector="A"
           yChannelSelector="A"
           result="displacementMap"

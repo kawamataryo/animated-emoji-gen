@@ -24,7 +24,7 @@
         <animate
           attributeName="stdDeviation"
           from="0 0"
-          to="15 0"
+          to="20 0"
           dur="1s"
           repeatCount="indefinite"
         />

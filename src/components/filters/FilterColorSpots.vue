@@ -41,10 +41,7 @@
         />
         <feColorMatrix
           type="matrix"
-          values="1 0 0 0 0
-0 1 0 0 0
-0 0 1 0 0
-0 0 0 10 0"
+          :values="colorMatrix"
           in="morphology"
           result="colormatrix"
         />
@@ -78,6 +75,9 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/runtime-core";
+import { computed } from "vue";
+import hexRgb from "hex-rgb";
+import { hex2colorMatrix } from "../../utils/hex2colorMatrix";
 
 export default defineComponent({
   name: "FilterColorSpots",
@@ -99,8 +99,13 @@ export default defineComponent({
       default: 128,
     },
   },
-  setup() {
-    return {};
+  setup(props) {
+    const colorMatrix = computed(() =>
+      hex2colorMatrix(props.color, "0 0 0 10 0")
+    );
+    return {
+      colorMatrix,
+    };
   },
 });
 </script>

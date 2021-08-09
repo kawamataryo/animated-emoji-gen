@@ -27,7 +27,7 @@
         <animate
           attributeName="seed"
           from="1"
-          to="100"
+          to="80"
           dur="1s"
           repeatCount="indefinite"
         />
@@ -35,7 +35,7 @@
       <feDisplacementMap
         in="SourceGraphic"
         in2="turbulence"
-        scale="20"
+        scale="18"
         xChannelSelector="G"
         yChannelSelector="A"
         result="displacementMap"
