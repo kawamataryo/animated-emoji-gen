@@ -15,7 +15,10 @@
             class="button is-small is-fullwidth is-light mt-2"
             @click="onDownload($event, component)"
           >
-            Download
+            <span class="icon is-small">
+              <RiDownload2Fill />
+            </span>
+            <span> Download </span>
           </button>
         </div>
       </div>
@@ -41,6 +44,7 @@ import FilterWaterDrops from "./filters/FilterWaterDrops.vue";
 import FilterScale from "./filters/FilterScale.vue";
 import FilterRotate from "./filters/FilterRotate.vue";
 import { convertGifAndSave } from "../core/saveImage";
+import RiDownload2Fill from "./icons/RiDownload2Fill.vue";
 
 export default defineComponent({
   name: "FilterGallery",
@@ -60,6 +64,7 @@ export default defineComponent({
     FilterWaterDrops,
     FilterScale,
     FilterRotate,
+    RiDownload2Fill,
   },
   props: {
     paths: {
