@@ -25,7 +25,7 @@
           attributeName="stdDeviation"
           from="0 0"
           to="15 0"
-          dur="3s"
+          dur="1s"
           repeatCount="indefinite"
         />
       </feGaussianBlur>

@@ -31,7 +31,7 @@
         type="rotate"
         to="0 120 120"
         from="360 120 120"
-        dur="1.5s"
+        dur="1s"
         additive="sum"
         repeatCount="indefinite"
       />

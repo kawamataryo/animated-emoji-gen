@@ -10,6 +10,7 @@ export class Svg2Gif {
   constructor(svg: HTMLElement, width = 500, height = 500) {
     this.svgElem = svg;
     this.encoder = new GIF({
+      workers: 1,
       width,
       height,
       background: "#fff",
@@ -25,10 +26,12 @@ export class Svg2Gif {
       img.src =
         "data:image/svg+xml;charset=utf-8;base64," +
         btoa(unescape(encodeURIComponent(data)));
-      // FIXME: 何故かわからないけど、bodyにimgをappendしたら動いた。ワカラナイ..
+
+      // FIXME: bodyにimgをappendしたら動いた。Chromeでしか動かない&動く理由が謎なので修正したい
       // appendをなくしたり、appendしたimageをdisplay-noneにすると動かないので、一旦cssのposition absoluteで要素を画面外に飛ばしている
       img.style.position = "absolute";
       img.style.top = "-1000px";
+
       document.body.appendChild(img);
       // ---
       img.onload = () => {

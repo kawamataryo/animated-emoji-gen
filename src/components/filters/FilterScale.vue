@@ -22,7 +22,7 @@
         type="scale"
         from="0.1 0.1"
         :to="scaleParams[i]"
-        dur="0.6s"
+        dur="1s"
         repeatCount="indefinite"
       />
     </path>
