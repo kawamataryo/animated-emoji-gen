@@ -2,7 +2,7 @@
   <div class="grid">
     <template v-for="(component, i) in filterComponents" :key="i">
       <div>
-        <div class="box">
+        <div class="box has-text-centered">
           <div class="path-wrapper">
             <Component
               :is="component"
@@ -12,13 +12,13 @@
             />
           </div>
           <button
-            class="button is-small is-fullwidth is-light mt-2"
+            class="button is-small is-fullwidth is-light mt-2 download"
             @click="onDownload($event, component)"
           >
             <span class="icon is-small">
               <RiDownload2Fill />
             </span>
-            <span> Download </span>
+            Download
           </button>
         </div>
       </div>
@@ -124,6 +124,7 @@ export default defineComponent({
 .path-wrapper {
   border: 1px solid #bbb;
   display: inline-block;
+  text-align: center;
 }
 
 .grid {
@@ -131,5 +132,11 @@ export default defineComponent({
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-auto-rows: minmax(200px, auto);
+}
+
+.download {
+  > span {
+    margin-right: 4px !important;
+  }
 }
 </style>
