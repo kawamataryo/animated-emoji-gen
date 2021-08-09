@@ -2,15 +2,25 @@
   <article class="panel has-background-white">
     <p class="panel-heading">Parameters</p>
     <div class="panel-block">
-      <textarea
-        v-model="inputText"
-        rows="2"
-        cols="6"
-        class="textarea"
-      ></textarea>
+      <div class="field is-fullwidth">
+        <label class="label">text</label>
+        <div class="control">
+          <textarea
+            v-model="inputText"
+            rows="2"
+            class="textarea"
+            placeholder="your emoji"
+          ></textarea>
+        </div>
+      </div>
     </div>
     <div class="panel-block">
-      <ColorPanel v-model:color="inputColor" :colors="COLORS" />
+      <div class="field is-fullwidth">
+        <label class="label">color</label>
+        <div class="control">
+          <ColorPanel v-model:color="inputColor" :colors="COLORS" />
+        </div>
+      </div>
     </div>
   </article>
 </template>
@@ -61,4 +71,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.is-fullwidth {
+  width: 100%;
+}
+</style>

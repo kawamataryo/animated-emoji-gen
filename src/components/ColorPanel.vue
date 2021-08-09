@@ -53,6 +53,7 @@ export default defineComponent({
     &:hover {
       opacity: 0.8;
     }
+    border-radius: 4px;
   }
 }
 </style>
