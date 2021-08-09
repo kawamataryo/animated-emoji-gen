@@ -1,7 +1,7 @@
 <template>
   <GitTag />
   <div class="container">
-    <h1 class="title is-size-1 has-text-left">Slack Emoji Creator 🎨</h1>
+    <h1 class="title is-size-1 has-text-left">Animated Custom Emoji Creator</h1>
     <div class="columns is-variable is-0-mobile">
       <div class="column is-one-fifth">
         <ParametersForm v-model:text="text" v-model:color="color" />
@@ -16,6 +16,7 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -25,6 +26,7 @@ import ParametersForm from "./components/ParametersForm.vue";
 import { COLORS } from "./utils/constants";
 import FilterGallery from "./components/FilterGallery.vue";
 import GitTag from "./components/GitTag.vue";
+import Footer from "./components/Footer.vue";
 
 const VIEW_SIZE = 128;
 
@@ -34,6 +36,7 @@ export default defineComponent({
     ParametersForm,
     FilterGallery,
     GitTag,
+    Footer,
   },
   setup() {
     const { paths, text, transforms } = useSvgPath("Emoji", VIEW_SIZE);
