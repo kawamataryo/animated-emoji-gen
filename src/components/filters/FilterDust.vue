@@ -23,21 +23,10 @@
         seed="4"
         stitchTiles="stitch"
         result="turbulence"
-      >
-        <animate
-          attributeName="seed"
-          from="1"
-          to="100"
-          dur="1s"
-          repeatCount="indefinite"
-        />
-      </feTurbulence>
+      />
       <feColorMatrix
         type="matrix"
-        values="0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 -40 10"
+        :values="colorMatrix"
         in="turbulence"
         result="colormatrix"
       />
@@ -51,10 +40,18 @@
         type="turbulence"
         baseFrequency="0.1 0.1"
         numOctaves="1"
-        seed="2"
+        seed="1"
         stitchTiles="stitch"
         result="turbulence1"
-      />
+      >
+        <animate
+          attributeName="seed"
+          from="1"
+          to="50"
+          dur="1s"
+          repeatCount="indefinite"
+        />
+      </feTurbulence>
       <feDisplacementMap
         in="composite"
         in2="turbulence1"
@@ -80,6 +77,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/runtime-core";
+import { computed } from "vue";
+import { hex2colorMatrix } from "../../utils/hex2colorMatrix";
 
 export default defineComponent({
   name: "FilterDust",
@@ -101,8 +100,13 @@ export default defineComponent({
       default: 128,
     },
   },
-  setup() {
-    return {};
+  setup(props) {
+    const colorMatrix = computed(() =>
+      hex2colorMatrix(props.color, "0 0 0 -38 10")
+    );
+    return {
+      colorMatrix,
+    };
   },
 });
 </script>
