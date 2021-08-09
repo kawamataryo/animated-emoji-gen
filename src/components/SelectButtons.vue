@@ -46,19 +46,26 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .selected {
-  box-shadow: 0 0 5px gray;
+  background-color: #4a154b;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
 }
 
 .grid {
   width: 100%;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   grid-auto-rows: minmax(25px, auto);
 
   > div {
-    &:hover {
-      opacity: 0.8;
+    transition: background-color ease 0.1s;
+    &:not(.selected) {
+      &:hover {
+        background-color: rgba(#4a154b, 0.1);
+      }
     }
     border-radius: 4px;
   }
