@@ -6,7 +6,12 @@
     </h1>
     <div class="columns is-variable is-0-mobile">
       <div class="column is-one-fifth">
-        <ParametersForm v-model:text="text" v-model:color="color" />
+        <ParametersForm
+          v-model:text="text"
+          v-model:color="color"
+          v-model:fontFamily="fontType.family"
+          v-model:fontWeight="fontType.weight"
+        />
       </div>
       <div class="column is-four-fifths">
         <FilterGallery
@@ -41,7 +46,10 @@ export default defineComponent({
     Footer,
   },
   setup() {
-    const { paths, text, transforms } = useSvgPath("Emoji", VIEW_SIZE);
+    const { paths, text, transforms, fontType } = useSvgPath(
+      "Emoji",
+      VIEW_SIZE
+    );
     const color = ref(COLORS[0]);
     const changeColor = (e: { hex: string }) => {
       color.value = e.hex;
@@ -52,6 +60,7 @@ export default defineComponent({
       text,
       transforms,
       color,
+      fontType,
       changeColor,
     };
   },

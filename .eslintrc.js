@@ -20,7 +20,7 @@ module.exports = {
     "@typescript-eslint"
   ],
   "rules": {
-
+    "@typescript-eslint/ban-ts-comment": "warn"
   },
   "ignorePatterns": ["**/dist/**/*.*", "**/*/jest.config.js"]
 };

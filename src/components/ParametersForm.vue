@@ -22,19 +22,43 @@
         </div>
       </div>
     </div>
+    <div class="panel-block">
+      <div class="field is-fullwidth">
+        <label class="label">font weight</label>
+        <div class="control">
+          <SelectButtons
+            v-model:value="inputFontFamily"
+            :options="fontFamilyOptions"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="panel-block">
+      <div class="field is-fullwidth">
+        <label class="label">font family</label>
+        <div class="control">
+          <SelectButtons
+            v-model:value="inputFontWeight"
+            :options="fontWeightOptions"
+          />
+        </div>
+      </div>
+    </div>
   </article>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
+import { defineComponent, PropType } from "@vue/runtime-core";
 import { computed } from "vue";
 import { COLORS } from "../utils/constants";
 import ColorPanel from "./ColorPanel.vue";
+import SelectButtons from "./SelectButtons.vue";
 
 export default defineComponent({
   name: "ParametersForm",
   components: {
     ColorPanel,
+    SelectButtons,
   },
   props: {
     color: {
@@ -45,8 +69,21 @@ export default defineComponent({
       type: String,
       default: "",
     },
+    fontFamily: {
+      type: String,
+      default: "",
+    },
+    fontWeight: {
+      type: String,
+      default: "",
+    },
   },
-  emits: ["update:text", "update:color"],
+  emits: [
+    "update:text",
+    "update:color",
+    "update:fontFamily",
+    "update:fontWeight",
+  ],
   setup(props, ctx) {
     const inputText = computed({
       get: () => props.text,
@@ -62,10 +99,39 @@ export default defineComponent({
       },
     });
 
+    const fontFamilyOptions = [
+      { label: "serif", value: "serif" },
+      { label: "sans", value: "sans" },
+    ];
+
+    const inputFontFamily = computed({
+      get: () => props.fontFamily,
+      set: (val) => {
+        ctx.emit("update:fontFamily", val);
+      },
+    });
+
+    const fontWeightOptions = [
+      { label: "bold", value: "bold" },
+      { label: "medium", value: "medium" },
+      { label: "light", value: "light" },
+    ];
+
+    const inputFontWeight = computed({
+      get: () => props.fontWeight,
+      set: (val) => {
+        ctx.emit("update:fontWeight", val);
+      },
+    });
+
     return {
       inputText,
       inputColor,
       COLORS,
+      fontFamilyOptions,
+      inputFontFamily,
+      fontWeightOptions,
+      inputFontWeight,
     };
   },
 });

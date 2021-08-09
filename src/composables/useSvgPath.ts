@@ -1,9 +1,45 @@
 import { computed, onMounted, ref } from "vue";
 import { Font, load } from "opentype.js";
 
+type FontType = {
+  serif: {
+    bold: Font | null;
+    light: Font | null;
+    medium: Font | null;
+  };
+  sans: {
+    bold: Font | null;
+    light: Font | null;
+    medium: Font | null;
+  };
+};
+
+const initialFonts = {
+  serif: {
+    bold: null,
+    light: null,
+    medium: null,
+  },
+  sans: {
+    bold: null,
+    light: null,
+    medium: null,
+  },
+};
+
 export const useSvgPath = (initialText: string, viewSize: number) => {
   const text = ref(initialText);
-  const font = ref<Font | null>(null);
+  const fonts = ref<FontType>(initialFonts);
+  const fontType = ref<{ family: string; weight: string }>({
+    family: "sans",
+    weight: "bold",
+  });
+
+  const font = computed(
+    () =>
+      // @ts-ignore TODO
+      fonts.value[fontType.value.family][fontType.value.weight] as Font | null
+  );
 
   const rows = computed(() => {
     return text.value.trim().split("\n");
@@ -48,12 +84,36 @@ export const useSvgPath = (initialText: string, viewSize: number) => {
     });
   });
 
+  const loadFonts = async () => {
+    const loadedFonts = await Promise.all([
+      load("/fonts/NotoSerifJP-Bold.otf"),
+      load("/fonts/NotoSerifJP-Light.otf"),
+      load("/fonts/NotoSerifJP-Medium.otf"),
+      load("/fonts/NotoSansJP-Bold.otf"),
+      load("/fonts/NotoSansJP-Light.otf"),
+      load("/fonts/NotoSansJP-Medium.otf"),
+    ]);
+    fonts.value = {
+      serif: {
+        bold: loadedFonts[0],
+        light: loadedFonts[1],
+        medium: loadedFonts[2],
+      },
+      sans: {
+        bold: loadedFonts[3],
+        light: loadedFonts[4],
+        medium: loadedFonts[5],
+      },
+    };
+  };
+
   onMounted(async () => {
-    font.value = await load("NotoSansJP-Bold.otf");
+    loadFonts();
   });
 
   return {
     paths,
+    fontType,
     text,
     transforms,
   };
