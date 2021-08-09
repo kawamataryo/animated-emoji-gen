@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "@vue/runtime-core";
+import { defineComponent } from "@vue/runtime-core";
 import { computed } from "vue";
 import { COLORS } from "../utils/constants";
 import ColorPanel from "./ColorPanel.vue";
@@ -140,5 +140,9 @@ export default defineComponent({
 <style scoped lang="scss">
 .is-fullwidth {
   width: 100%;
+}
+.panel-heading {
+  background-color: #4a154b;
+  color: #fff;
 }
 </style>
