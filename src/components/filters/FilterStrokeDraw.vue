@@ -11,7 +11,7 @@
       :key="i"
       :stroke="color"
       stroke-width="5"
-      stroke-dasharray="600"
+      stroke-dasharray="1000"
       :transform="transforms[i]"
       fill="transparent"
       :d="p"
@@ -19,7 +19,7 @@
       <rect width="100%" height="100%" fill="#fff" />
       <animate
         attributeName="stroke-dashoffset"
-        from="600"
+        from="1000"
         to="0"
         dur="1s"
         repeatCount="indefinite"
