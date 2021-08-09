@@ -4,13 +4,19 @@
       <div>
         <div class="box has-text-centered">
           <div class="path-wrapper">
-            <Component
-              :is="component"
-              :transforms="transforms"
-              :paths="paths"
-              :color="color"
-            />
+            <template v-if="paths[0]">
+              <Component
+                :is="component"
+                :transforms="transforms"
+                :paths="paths"
+                :color="color"
+              />
+            </template>
+            <template v-else>
+              <div class="mock-box"></div>
+            </template>
           </div>
+
           <button
             class="button is-small is-fullwidth is-light mt-2 download"
             @click="onDownload($event, component)"
@@ -141,5 +147,11 @@ export default defineComponent({
   width: 100%;
   max-width: 130px;
   display: inline-block;
+}
+
+.mock-box {
+  width: 128px;
+  height: 128px;
+  background-color: #fff;
 }
 </style>
