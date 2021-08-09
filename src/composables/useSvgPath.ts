@@ -84,6 +84,8 @@ export const useSvgPath = (initialText: string, viewSize: number) => {
     });
   });
 
+  const loading = ref(true);
+
   const loadFonts = async () => {
     const loadedFonts = await Promise.all([
       load("/fonts/NotoSerifJP-Black.otf"),
@@ -105,6 +107,8 @@ export const useSvgPath = (initialText: string, viewSize: number) => {
         medium: loadedFonts[5],
       },
     };
+
+    loading.value = false;
   };
 
   onMounted(async () => {
@@ -116,5 +120,6 @@ export const useSvgPath = (initialText: string, viewSize: number) => {
     fontType,
     text,
     transforms,
+    loading,
   };
 };

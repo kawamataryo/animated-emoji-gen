@@ -21,6 +21,9 @@
     </div>
   </div>
   <Footer />
+  <transition appear>
+    <Loading v-if="loading" />
+  </transition>
 </template>
 
 <script lang="ts">
@@ -31,26 +34,25 @@ import { COLORS } from "./utils/constants";
 import FilterGallery from "./components/FilterGallery.vue";
 import GitTag from "./components/GitTag.vue";
 import Footer from "./components/Footer.vue";
+import Loading from "./components/Loading.vue";
 
 const VIEW_SIZE = 128;
 
 export default defineComponent({
   name: "App",
   components: {
+    Loading,
     ParametersForm,
     FilterGallery,
     GitTag,
     Footer,
   },
   setup() {
-    const { paths, text, transforms, fontType } = useSvgPath(
+    const { paths, text, transforms, fontType, loading } = useSvgPath(
       "Emoji",
       VIEW_SIZE
     );
     const color = ref(COLORS[0]);
-    const changeColor = (e: { hex: string }) => {
-      color.value = e.hex;
-    };
 
     return {
       paths,
@@ -58,7 +60,7 @@ export default defineComponent({
       transforms,
       color,
       fontType,
-      changeColor,
+      loading,
     };
   },
 });
@@ -75,5 +77,16 @@ html {
   padding-top: 60px;
   background-image: url("/background.svg");
   background-position: center 0;
+  position: relative;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
