@@ -6,7 +6,7 @@ export const convertGifAndSave = async (svgElmId: string, fileName: string) => {
     return;
   }
   const gif = new Svg2Gif(elm, 128, 128);
-  const FRAME_COUNT = 50;
+  const FRAME_COUNT = 20;
   for (let i = 0; i < FRAME_COUNT; i++) {
     await gif.add();
   }

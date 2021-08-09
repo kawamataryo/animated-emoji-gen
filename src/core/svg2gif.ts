@@ -32,7 +32,7 @@ export class Svg2Gif {
       document.body.appendChild(img);
       // ---
       img.onload = () => {
-        this.encoder.addFrame(img, { delay: 10 });
+        this.encoder.addFrame(img, { delay: 1 });
         resolve();
       };
       img.onerror = () => {
