@@ -15,6 +15,10 @@ export const convertGifAndSave = async (svgElmId: string, fileName: string) => {
     await gif.add();
   }
   const blob = await gif.render();
+
+  // svg2gifの内部で作成したtmp画像の削除
+  document.querySelectorAll(".tmp-img").forEach((e) => e.remove());
+
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   document.body.appendChild(a);

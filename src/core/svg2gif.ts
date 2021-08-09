@@ -27,13 +27,13 @@ export class Svg2Gif {
         "data:image/svg+xml;charset=utf-8;base64," +
         btoa(unescape(encodeURIComponent(data)));
 
-      // FIXME: bodyにimgをappendしたら動いた。Chromeでしか動かない&動く理由が謎なので修正したい
+      // FIXME: bodyにimgをappendしたら動いた。Chromeでしか動かないので修正したい
       // appendをなくしたり、appendしたimageをdisplay-noneにすると動かないので、一旦cssのposition absoluteで要素を画面外に飛ばしている
       img.style.position = "absolute";
       img.style.top = "-1000px";
-
+      img.classList.add("tmp-img");
       document.body.appendChild(img);
-      // ---
+
       img.onload = () => {
         this.encoder.addFrame(img, { delay: 1 });
         resolve();
