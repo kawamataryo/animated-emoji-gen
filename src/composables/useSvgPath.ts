@@ -86,10 +86,10 @@ export const useSvgPath = (initialText: string, viewSize: number) => {
 
   const loadFonts = async () => {
     const loadedFonts = await Promise.all([
-      load("/fonts/NotoSerifJP-Bold.otf"),
+      load("/fonts/NotoSerifJP-Black.otf"),
       load("/fonts/NotoSerifJP-Light.otf"),
       load("/fonts/NotoSerifJP-Medium.otf"),
-      load("/fonts/NotoSansJP-Bold.otf"),
+      load("/fonts/NotoSansJP-Black.otf"),
       load("/fonts/NotoSansJP-Light.otf"),
       load("/fonts/NotoSansJP-Medium.otf"),
     ]);

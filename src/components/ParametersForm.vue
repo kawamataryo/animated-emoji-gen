@@ -24,7 +24,7 @@
     </div>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">font weight</label>
+        <label class="label">font family</label>
         <div class="control">
           <SelectButtons
             v-model:value="inputFontFamily"
@@ -35,7 +35,7 @@
     </div>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">font family</label>
+        <label class="label">font weight</label>
         <div class="control">
           <SelectButtons
             v-model:value="inputFontWeight"
