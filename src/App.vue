@@ -1,9 +1,6 @@
 <template>
   <GitTag />
   <div class="container">
-    <h1 class="title is-size-1 has-text-left">
-      Animated custom emoji generator
-    </h1>
     <div class="columns is-variable is-0-mobile">
       <div class="column is-one-fifth">
         <ParametersForm
@@ -76,9 +73,7 @@ html {
 .body {
   background-color: #333;
   padding-top: 60px;
-  background-image: url("/background-image.jpg");
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: color-burn;
+  background-image: url("/background.svg");
+  background-position: center 0;
 }
 </style>
