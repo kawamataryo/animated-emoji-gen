@@ -1,7 +1,7 @@
 <template>
   <div class="fork__tag" @click="openGithub">
     <img :src="githubIcon" class="github__icon" />
-    <div class="fork__description">Let's Contribute!</div>
+    <div class="fork__description">Code is here!</div>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   padding-bottom: 2px;
-  background-color: #111;
+  background-color: #333;
   transform: rotate(45deg);
   transition: background-color 0.5s ease;
   .github__icon {
@@ -60,7 +60,7 @@ export default defineComponent({
       transition: all 0.2s ease;
       pointer-events: none;
       z-index: 0;
-      color: #fff;
+      color: #000;
     }
     &:hover {
       transition: background-color 0.2s ease;

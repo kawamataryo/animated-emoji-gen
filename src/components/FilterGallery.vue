@@ -134,9 +134,12 @@ export default defineComponent({
   grid-auto-rows: minmax(200px, auto);
 }
 
-.download {
+.button.download {
   > span {
     margin-right: 4px !important;
   }
+  width: 100%;
+  max-width: 130px;
+  display: inline-block;
 }
 </style>
