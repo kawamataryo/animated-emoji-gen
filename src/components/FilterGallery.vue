@@ -40,7 +40,7 @@ import FilterWaterColor from "./filters/FilterWaterColor.vue";
 import FilterZebra from "./filters/FilterZebra.vue";
 import FilterBlur from "./filters/FilterBlur.vue";
 import FilterColorSpots2 from "./filters/FilterColorSpots2.vue";
-import FilterWaterDrops from "./filters/FilterWaterDrops.vue";
+import FilterBlink from "./filters/FilterBlink.vue";
 import FilterScale from "./filters/FilterScale.vue";
 import FilterRotate from "./filters/FilterRotate.vue";
 import { convertGifAndSave } from "../core/saveImage";
@@ -61,7 +61,7 @@ export default defineComponent({
     FilterZebra,
     FilterBlur,
     FilterColorSpots2,
-    FilterWaterDrops,
+    FilterBlink,
     FilterScale,
     FilterRotate,
     RiDownload2Fill,
@@ -94,13 +94,13 @@ export default defineComponent({
       "FilterWaves",
       "FilterDancingStroke",
       "FilterStrokeDraw",
-      "FilterWaterColor",
       "FilterZebra",
       "FilterBlur",
-      "FilterColorSpots2",
-      "FilterWaterDrops",
+      "FilterBlink",
       "FilterScale",
       "FilterRotate",
+      "FilterWaterColor",
+      "FilterColorSpots2",
     ];
 
     const onDownload = async (
