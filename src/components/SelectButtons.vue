@@ -62,12 +62,12 @@ export default defineComponent({
 
   > div {
     transition: background-color ease 0.1s;
+    border-radius: 4px !important;
     &:not(.selected) {
       &:hover {
         background-color: rgba(#4a154b, 0.1);
       }
     }
-    border-radius: 4px;
   }
 }
 </style>
