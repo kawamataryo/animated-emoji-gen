@@ -10,6 +10,7 @@
       <div></div>
       <div></div>
     </div>
+    <div class="loading-text">Loading fonts...</div>
   </div>
 </template>
 
@@ -31,11 +32,18 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   top: 0;
   right: 0;
   left: 0;
   position: fixed;
   background-color: rgba(#4a154b, 0.9);
+}
+
+.loading-text {
+  color: #fff;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .lds-roller {
