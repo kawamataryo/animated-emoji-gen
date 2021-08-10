@@ -9,6 +9,15 @@
       @click="changeColor(c)"
     ></div>
   </div>
+  <label class="label is-size-7"
+    >custom
+    <input
+      type="color"
+      class="input-color"
+      :value="color"
+      @change="changeColor($event.target.value)"
+    />
+  </label>
 </template>
 
 <script lang="ts">
@@ -55,5 +64,9 @@ export default defineComponent({
     }
     border-radius: 4px;
   }
+}
+
+.input-color {
+  margin-top: 10px;
 }
 </style>
