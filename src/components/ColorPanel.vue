@@ -15,7 +15,7 @@
       type="color"
       class="input-color"
       :value="color"
-      @change="changeColor($event.target.value)"
+      @input="changeInputColor"
     />
   </label>
 </template>
@@ -36,11 +36,16 @@ export default defineComponent({
   },
   emits: ["update:color"],
   setup(_, ctx) {
+    const changeInputColor = (e: any) => {
+      changeColor(e.target.value);
+    };
+
     const changeColor = (color: string) => {
       ctx.emit("update:color", color);
     };
     return {
       changeColor,
+      changeInputColor,
     };
   },
 });
