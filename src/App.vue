@@ -4,78 +4,38 @@
     <template v-if="isNotSupportedBrowser">
       <NotSupportMessage />
     </template>
-    <div class="columns is-variable is-0-mobile">
-      <div class="column is-one-fifth">
-        <ParametersForm
-          v-model:text="text"
-          v-model:color="color"
-          v-model:fontFamily="fontType.family"
-          v-model:fontWeight="fontType.weight"
-        />
-      </div>
-      <div class="column is-four-fifths">
-        <FilterGallery
-          :text="text"
-          :paths="paths"
-          :color="color"
-          :transforms="transforms"
-        />
-      </div>
-    </div>
+    <MainPage />
   </div>
   <Footer />
-  <transition appear>
-    <Loading v-if="loading" />
-  </transition>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
-import { useSvgPath } from "./composables/useSvgPath";
-import ParametersForm from "./components/ParametersForm.vue";
-import { COLORS } from "./utils/constants";
-import FilterGallery from "./components/FilterGallery.vue";
 import GitTag from "./components/GitTag.vue";
+import MainPage from "./pages/MainPage.vue";
 import Footer from "./components/Footer.vue";
-import Loading from "./components/Loading.vue";
-import { detect } from "detect-browser";
 import NotSupportMessage from "./components/NotSupportMessage.vue";
-
-const VIEW_SIZE = 128;
+import { detect } from "detect-browser";
 
 export default defineComponent({
   name: "App",
   components: {
-    Loading,
-    ParametersForm,
-    FilterGallery,
     GitTag,
+    MainPage,
     Footer,
     NotSupportMessage,
   },
   setup() {
-    const { paths, text, transforms, fontType, loading } = useSvgPath(
-      "Emoji",
-      VIEW_SIZE
-    );
-    const color = ref(COLORS[0]);
     const isNotSupportedBrowser = ref(false);
 
     onMounted(() => {
       const browser = detect();
-
       if (browser && browser.name !== "chrome") {
         isNotSupportedBrowser.value = true;
       }
     });
 
     return {
-      paths,
-      text,
-      transforms,
-      color,
-      fontType,
-      loading,
       isNotSupportedBrowser,
     };
   },
@@ -92,15 +52,15 @@ html {
   background-color: #efefef;
   padding-top: 60px;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 25px;
+  }
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 1s;
-}
-
-.v-enter,
-.v-leave-to {
-  opacity: 0;
+.container {
+  @media screen and (max-width: 768px) {
+    padding: 0 15px;
+  }
 }
 </style>
