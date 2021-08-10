@@ -93,7 +93,7 @@
         <feMergeNode in="composite2" />
       </feMerge>
     </filter>
-    <rect width="100%" height="100%" fill="#fff" />
+    <rect width="100%" height="100%" :fill="backgroundColor" />
     <path
       v-for="(p, i) in paths"
       :key="i"
@@ -128,6 +128,10 @@ export default defineComponent({
     viewBoxSize: {
       type: Number,
       default: 128,
+    },
+    backgroundColor: {
+      type: String,
+      default: "transparent",
     },
   },
   setup() {

@@ -13,7 +13,8 @@ export class Svg2Gif {
       workers: 1,
       width,
       height,
-      background: "#fff",
+      background: "transparent",
+      transparent: "true",
       quality: 1,
       dither: false,
     });

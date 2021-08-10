@@ -10,6 +10,7 @@
                 :transforms="transforms"
                 :paths="paths"
                 :color="color"
+                :background-color="backgroundColor"
               />
             </template>
             <template v-else>
@@ -90,6 +91,10 @@ export default defineComponent({
     transforms: {
       type: Array as PropType<string[]>,
       default: () => [],
+    },
+    backgroundColor: {
+      type: String,
+      default: "transparent",
     },
   },
   setup(props) {

@@ -34,7 +34,7 @@ export default defineComponent({
   },
   emits: ["update:value"],
   setup(_, ctx) {
-    const onChange = (value: string) => {
+    const onChange = (value: Options["value"]) => {
       ctx.emit("update:value", value);
     };
     return {

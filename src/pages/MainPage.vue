@@ -6,6 +6,7 @@
         v-model:color="color"
         v-model:fontFamily="fontType.family"
         v-model:fontWeight="fontType.weight"
+        v-model:backgroundColor="backgroundColor"
       />
       <div class="share-buttons">
         <TwitterShareButton />
@@ -17,6 +18,7 @@
         :text="text"
         :paths="paths"
         :color="color"
+        :background-color="backgroundColor"
         :transforms="transforms"
       />
     </div>
@@ -53,6 +55,7 @@ export default defineComponent({
       VIEW_SIZE
     );
     const color = ref(COLORS[0]);
+    const backgroundColor = ref("transparent");
 
     return {
       paths,
@@ -61,6 +64,7 @@ export default defineComponent({
       color,
       fontType,
       loading,
+      backgroundColor,
     };
   },
 });

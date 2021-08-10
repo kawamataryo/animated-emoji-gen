@@ -52,6 +52,17 @@
         </div>
       </div>
     </div>
+    <div class="panel-block">
+      <div class="field is-fullwidth">
+        <label class="label">background</label>
+        <div class="control">
+          <SelectButtons
+            v-model:value="inputBackground"
+            :options="backgroundOptions"
+          />
+        </div>
+      </div>
+    </div>
   </article>
 </template>
 
@@ -85,12 +96,17 @@ export default defineComponent({
       type: String,
       default: "",
     },
+    backgroundColor: {
+      type: String,
+      default: "transparent",
+    },
   },
   emits: [
     "update:text",
     "update:color",
     "update:fontFamily",
     "update:fontWeight",
+    "update:backgroundColor",
   ],
   setup(props, ctx) {
     const inputText = computed({
@@ -132,6 +148,19 @@ export default defineComponent({
       },
     });
 
+    const backgroundOptions = [
+      { label: "transparent", value: "transparent" },
+      { label: "white", value: "#fff" },
+      { label: "black", value: "#000" },
+    ];
+
+    const inputBackground = computed({
+      get: () => props.backgroundColor,
+      set: (val) => {
+        ctx.emit("update:backgroundColor", val);
+      },
+    });
+
     return {
       inputText,
       inputColor,
@@ -140,6 +169,8 @@ export default defineComponent({
       inputFontFamily,
       fontWeightOptions,
       inputFontWeight,
+      backgroundOptions,
+      inputBackground,
     };
   },
 });
