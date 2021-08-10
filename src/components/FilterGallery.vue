@@ -144,7 +144,7 @@ export default defineComponent({
 .grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-rows: minmax(200px, auto);
 }
 
