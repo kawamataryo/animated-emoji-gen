@@ -1,4 +1,4 @@
-# Animated custom emoji generator
-The tool makes it easy to create animated GIFs of Slack emoji.
+# Animated emoji gen
+The tool makes it easy to create animated GIFs of Slack custom emoji.
 
-## [Site](https://slack-emoji-creater.vercel.app/)
+## [Website](https://www.animated-emoji-gen.com/)
