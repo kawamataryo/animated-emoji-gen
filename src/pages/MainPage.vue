@@ -7,6 +7,9 @@
         v-model:fontFamily="fontType.family"
         v-model:fontWeight="fontType.weight"
       />
+      <div>
+        <TwitterShareButton />
+      </div>
     </div>
     <div class="column is-four-fifths">
       <FilterGallery
@@ -29,6 +32,7 @@ import ParametersForm from "../components/ParametersForm.vue";
 import { COLORS } from "../utils/constants";
 import FilterGallery from "../components/FilterGallery.vue";
 import Loading from "../components/Loading.vue";
+import TwitterShareButton from "../components/TwitterShareButton.vue";
 
 const VIEW_SIZE = 128;
 
@@ -38,6 +42,7 @@ export default defineComponent({
     Loading,
     ParametersForm,
     FilterGallery,
+    TwitterShareButton,
   },
   setup() {
     const { paths, text, transforms, fontType, loading } = useSvgPath(

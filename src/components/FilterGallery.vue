@@ -22,9 +22,9 @@
             :disabled="!paths[0]"
             @click="onDownload($event, component)"
           >
-            <span class="icon is-small">
+            <i class="icon is-small">
               <RiDownload2Fill />
-            </span>
+            </i>
             Download
           </button>
         </div>
@@ -153,7 +153,7 @@ export default defineComponent({
 }
 
 .button.download {
-  > span {
+  > i {
     margin-right: 4px !important;
   }
   width: 100%;
