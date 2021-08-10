@@ -1,6 +1,6 @@
 <template>
   <article class="panel has-background-white pb-3">
-    <h1 class="panel-heading">Animated emoji gen</h1>
+    <h1 class="panel-heading">Animated custom emoji generator</h1>
     <div class="panel-block">
       <div class="field is-fullwidth">
         <label class="label">text</label>
