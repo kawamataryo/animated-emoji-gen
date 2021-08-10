@@ -16,6 +16,7 @@
     "@types/gif.js": "^0.2.2",
     "bulma": "^0.9.3",
     "canvg": "^3.0.7",
+    "detect-browser": "^5.2.0",
     "gif.js": "^0.2.0",
     "hex-rgb": "^5.0.0",
     "makerjs": "^0.17.1",

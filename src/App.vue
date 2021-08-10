@@ -1,6 +1,9 @@
 <template>
   <GitTag />
   <div class="container">
+    <template v-if="isNotSupportedBrowser">
+      <NotSupportedBrowserMessage />
+    </template>
     <div class="columns is-variable is-0-mobile">
       <div class="column is-one-fifth">
         <ParametersForm
@@ -27,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import { useSvgPath } from "./composables/useSvgPath";
 import ParametersForm from "./components/ParametersForm.vue";
 import { COLORS } from "./utils/constants";
@@ -35,6 +38,8 @@ import FilterGallery from "./components/FilterGallery.vue";
 import GitTag from "./components/GitTag.vue";
 import Footer from "./components/Footer.vue";
 import Loading from "./components/Loading.vue";
+import { detect } from "detect-browser";
+import NotSupportedBrowserMessage from "./components/NotSupportedBrowserMessage.vue";
 
 const VIEW_SIZE = 128;
 
@@ -46,6 +51,7 @@ export default defineComponent({
     FilterGallery,
     GitTag,
     Footer,
+    NotSupportedBrowserMessage,
   },
   setup() {
     const { paths, text, transforms, fontType, loading } = useSvgPath(
@@ -53,6 +59,15 @@ export default defineComponent({
       VIEW_SIZE
     );
     const color = ref(COLORS[0]);
+    const isNotSupportedBrowser = ref(false);
+
+    onMounted(() => {
+      const browser = detect();
+
+      if (browser && browser.name !== "chrome") {
+        isNotSupportedBrowser.value = true;
+      }
+    });
 
     return {
       paths,
@@ -61,6 +76,7 @@ export default defineComponent({
       color,
       fontType,
       loading,
+      isNotSupportedBrowser,
     };
   },
 });
