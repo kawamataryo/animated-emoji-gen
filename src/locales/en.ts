@@ -3,7 +3,7 @@ export const enMessages = {
     supportBrowserWarningTitle: "Your browser does not support",
     supportBrowserWarningMessage:
       "Sorry. This app only supports the latest Chrome browser. Please try again with Chrome browser",
-    download: "download",
+    download: "Download",
   },
   labels: {
     text: "text",
