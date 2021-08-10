@@ -27,12 +27,12 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { useSvgPath } from "../composables/useSvgPath";
 import ParametersForm from "../components/ParametersForm.vue";
 import { COLORS } from "../utils/constants";
 import FilterGallery from "../components/FilterGallery.vue";
 import Loading from "../components/Loading.vue";
 import TwitterShareButton from "../components/TwitterShareButton.vue";
+import { useGenerateFontPath } from "../composables/useGenerateFontPath";
 
 const VIEW_SIZE = 128;
 
@@ -45,7 +45,7 @@ export default defineComponent({
     TwitterShareButton,
   },
   setup() {
-    const { paths, text, transforms, fontType, loading } = useSvgPath(
+    const { paths, text, transforms, fontType, loading } = useGenerateFontPath(
       "Emoji",
       VIEW_SIZE
     );

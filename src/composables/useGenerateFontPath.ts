@@ -27,7 +27,7 @@ const initialFonts = {
   },
 };
 
-export const useSvgPath = (initialText: string, viewSize: number) => {
+export const useGenerateFontPath = (initialText: string, viewSize: number) => {
   const text = ref(initialText);
   const fonts = ref<FontType>(initialFonts);
   const fontType = ref<{ family: string; weight: string }>({
