@@ -9,8 +9,7 @@
 import { defineComponent } from "vue";
 import GITHUB_ICON from "../../public/github-logo.png";
 
-const GITHUB_REPO =
-  "https://github.com/kawamataryo/animated-custom-emoji-generator";
+const GITHUB_REPO = "https://github.com/kawamataryo/animated-emoji-gen";
 
 export default defineComponent({
   name: "GitTag",
