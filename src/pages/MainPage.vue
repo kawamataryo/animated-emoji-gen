@@ -7,8 +7,9 @@
         v-model:fontFamily="fontType.family"
         v-model:fontWeight="fontType.weight"
       />
-      <div>
+      <div class="share-buttons">
         <TwitterShareButton />
+        <HatenaBookmarkButton />
       </div>
     </div>
     <div class="column is-four-fifths">
@@ -33,6 +34,7 @@ import FilterGallery from "../components/FilterGallery.vue";
 import Loading from "../components/Loading.vue";
 import TwitterShareButton from "../components/TwitterShareButton.vue";
 import { useGenerateFontPath } from "../composables/useGenerateFontPath";
+import HatenaBookmarkButton from "../components/HatenaBookmarkButton.vue";
 
 const VIEW_SIZE = 128;
 
@@ -43,6 +45,7 @@ export default defineComponent({
     ParametersForm,
     FilterGallery,
     TwitterShareButton,
+    HatenaBookmarkButton,
   },
   setup() {
     const { paths, text, transforms, fontType, loading } = useGenerateFontPath(
@@ -72,5 +75,16 @@ export default defineComponent({
 .v-enter,
 .v-leave-to {
   opacity: 0;
+}
+
+.share-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  > a {
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
 }
 </style>
