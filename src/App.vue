@@ -63,4 +63,8 @@ html {
     padding: 0 15px;
   }
 }
+
+.label {
+  font-weight: 300 !important;
+}
 </style>

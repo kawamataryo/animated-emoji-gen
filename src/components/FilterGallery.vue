@@ -26,7 +26,7 @@
             <i class="icon is-small">
               <RiDownload2Fill />
             </i>
-            Download
+            {{ t("message.download") }}
           </button>
         </div>
       </div>
@@ -54,6 +54,7 @@ import FilterRotate from "./filters/FilterRotate.vue";
 import { convertGifAndSave } from "../core/saveImage";
 import RiDownload2Fill from "./icons/RiDownload2Fill.vue";
 import { event } from "vue-gtag";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "FilterGallery",
@@ -131,7 +132,10 @@ export default defineComponent({
       });
     };
 
+    const { t } = useI18n();
+
     return {
+      t,
       filterComponents,
       onDownload,
     };

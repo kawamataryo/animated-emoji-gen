@@ -11,7 +11,7 @@
     </h1>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">text</label>
+        <label class="label">{{ t("labels.text") }}</label>
         <div class="control">
           <textarea
             v-model="inputText"
@@ -24,7 +24,7 @@
     </div>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">color</label>
+        <label class="label">{{ t("labels.color") }}</label>
         <div class="control">
           <ColorPanel v-model:color="inputColor" :colors="COLORS" />
         </div>
@@ -32,7 +32,7 @@
     </div>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">font family</label>
+        <label class="label">{{ t("labels.fontFamily") }}</label>
         <div class="control">
           <SelectButtons
             v-model:value="inputFontFamily"
@@ -43,7 +43,7 @@
     </div>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">font weight</label>
+        <label class="label">{{ t("labels.fontWeight") }}</label>
         <div class="control">
           <SelectButtons
             v-model:value="inputFontWeight"
@@ -54,7 +54,7 @@
     </div>
     <div class="panel-block">
       <div class="field is-fullwidth">
-        <label class="label">background</label>
+        <label class="label">{{ t("labels.background") }}</label>
         <div class="control">
           <SelectButtons
             v-model:value="inputBackground"
@@ -72,6 +72,7 @@ import { computed } from "vue";
 import { COLORS } from "../utils/constants";
 import ColorPanel from "./ColorPanel.vue";
 import SelectButtons from "./SelectButtons.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "ParametersForm",
@@ -123,9 +124,11 @@ export default defineComponent({
       },
     });
 
+    const { t } = useI18n();
+
     const fontFamilyOptions = [
-      { label: "serif", value: "serif" },
-      { label: "sans", value: "sans" },
+      { label: t("selectButtonsOption.fontFamily.serif"), value: "serif" },
+      { label: t("selectButtonsOption.fontFamily.sans"), value: "sans" },
     ];
 
     const inputFontFamily = computed({
@@ -136,9 +139,9 @@ export default defineComponent({
     });
 
     const fontWeightOptions = [
-      { label: "bold", value: "bold" },
-      { label: "medium", value: "medium" },
-      { label: "light", value: "light" },
+      { label: t("selectButtonsOption.fontWeight.bold"), value: "bold" },
+      { label: t("selectButtonsOption.fontWeight.medium"), value: "medium" },
+      { label: t("selectButtonsOption.fontWeight.light"), value: "light" },
     ];
 
     const inputFontWeight = computed({
@@ -149,9 +152,12 @@ export default defineComponent({
     });
 
     const backgroundOptions = [
-      { label: "transparent", value: "transparent" },
-      { label: "white", value: "#fff" },
-      { label: "black", value: "#000" },
+      {
+        label: t("selectButtonsOption.background.transparent"),
+        value: "transparent",
+      },
+      { label: t("selectButtonsOption.background.white"), value: "#fff" },
+      { label: t("selectButtonsOption.background.black"), value: "#000" },
     ];
 
     const inputBackground = computed({
@@ -171,6 +177,7 @@ export default defineComponent({
       inputFontWeight,
       backgroundOptions,
       inputBackground,
+      t,
     };
   },
 });
