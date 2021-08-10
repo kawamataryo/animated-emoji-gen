@@ -169,6 +169,11 @@ export default defineComponent({
   &:hover {
     background-color: #cdcdcd;
   }
+  &.is-loading::after {
+    border: 2px solid #363636;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
 }
 
 .mock-box {
