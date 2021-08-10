@@ -19,6 +19,7 @@
 
           <button
             class="button is-small is-fullwidth is-light mt-2 download"
+            :disabled="!paths[0]"
             @click="onDownload($event, component)"
           >
             <span class="icon is-small">
