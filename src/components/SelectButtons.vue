@@ -46,8 +46,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .selected {
-  background-color: #4a154b;
-  color: #fff;
+  background-color: #ededed;
   &:hover {
     color: #fff;
   }

@@ -1,6 +1,14 @@
 <template>
   <article class="panel has-background-white pb-3">
-    <h1 class="panel-heading">Animated custom emoji generator</h1>
+    <h1 class="panel-heading">
+      <span
+        ><mark style="color: #1da1f2">E</mark
+        ><mark style="color: #2eb67d">m</mark
+        ><mark style="color: #e01e5a">o</mark
+        ><mark style="color: #ecb22e">ji</mark></span
+      >
+      generator
+    </h1>
     <div class="panel-block">
       <div class="field is-fullwidth">
         <label class="label">text</label>
@@ -142,7 +150,13 @@ export default defineComponent({
   width: 100%;
 }
 .panel-heading {
-  background-color: #4a154b;
-  color: #fff;
+  font-weight: 300;
+  > span {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  mark {
+    background-color: transparent;
+  }
 }
 </style>

@@ -49,7 +49,7 @@ html {
 }
 
 .body {
-  background-color: #efefef;
+  background-color: #f9f9f9;
   padding-top: 60px;
   position: relative;
 

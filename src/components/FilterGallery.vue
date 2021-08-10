@@ -18,7 +18,7 @@
           </div>
 
           <button
-            class="button is-small is-fullwidth is-light mt-2 download"
+            class="button is-small is-fullwidth mt-2 download"
             :disabled="!paths[0]"
             @click="onDownload($event, component)"
           >
@@ -159,6 +159,7 @@ export default defineComponent({
   width: 100%;
   max-width: 130px;
   display: inline-block;
+  background-color: #ededed;
 }
 
 .mock-box {
