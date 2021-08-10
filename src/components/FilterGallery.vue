@@ -160,6 +160,10 @@ export default defineComponent({
   max-width: 130px;
   display: inline-block;
   background-color: #ededed;
+
+  &:hover {
+    background-color: #cdcdcd;
+  }
 }
 
 .mock-box {
