@@ -38,11 +38,10 @@ export default defineComponent({
   left: 0;
   position: fixed;
   z-index: 1000;
-  background-color: rgba(#4a154b, 0.9);
+  background-color: rgba(#fff, 0.85);
 }
 
 .loading-text {
-  color: #fff;
   margin-top: 15px;
   text-align: center;
 }
@@ -73,6 +72,7 @@ export default defineComponent({
   animation-delay: -0.036s;
 }
 .lds-roller div:nth-child(1):after {
+  background-color: #1da1f2;
   top: 63px;
   left: 63px;
 }
@@ -80,6 +80,7 @@ export default defineComponent({
   animation-delay: -0.072s;
 }
 .lds-roller div:nth-child(2):after {
+  background-color: #2eb67d;
   top: 68px;
   left: 56px;
 }
@@ -87,6 +88,7 @@ export default defineComponent({
   animation-delay: -0.108s;
 }
 .lds-roller div:nth-child(3):after {
+  background-color: #e01e5a;
   top: 71px;
   left: 48px;
 }
@@ -94,6 +96,7 @@ export default defineComponent({
   animation-delay: -0.144s;
 }
 .lds-roller div:nth-child(4):after {
+  background-color: #ecb22e;
   top: 72px;
   left: 40px;
 }
@@ -101,6 +104,7 @@ export default defineComponent({
   animation-delay: -0.18s;
 }
 .lds-roller div:nth-child(5):after {
+  background-color: #1da1f2;
   top: 71px;
   left: 32px;
 }
@@ -108,6 +112,7 @@ export default defineComponent({
   animation-delay: -0.216s;
 }
 .lds-roller div:nth-child(6):after {
+  background-color: #2eb67d;
   top: 68px;
   left: 24px;
 }
@@ -115,6 +120,7 @@ export default defineComponent({
   animation-delay: -0.252s;
 }
 .lds-roller div:nth-child(7):after {
+  background-color: #e01e5a;
   top: 63px;
   left: 17px;
 }
@@ -122,6 +128,7 @@ export default defineComponent({
   animation-delay: -0.288s;
 }
 .lds-roller div:nth-child(8):after {
+  background-color: #ecb22e;
   top: 56px;
   left: 12px;
 }
