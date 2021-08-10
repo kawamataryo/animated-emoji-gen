@@ -37,6 +37,7 @@ export default defineComponent({
   right: 0;
   left: 0;
   position: fixed;
+  z-index: 1000;
   background-color: rgba(#4a154b, 0.9);
 }
 
