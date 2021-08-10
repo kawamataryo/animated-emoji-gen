@@ -2,7 +2,7 @@
   <GitTag />
   <div class="container">
     <template v-if="isNotSupportedBrowser">
-      <NotSupportedBrowserMessage />
+      <NotSupportMessage />
     </template>
     <div class="columns is-variable is-0-mobile">
       <div class="column is-one-fifth">
@@ -39,7 +39,7 @@ import GitTag from "./components/GitTag.vue";
 import Footer from "./components/Footer.vue";
 import Loading from "./components/Loading.vue";
 import { detect } from "detect-browser";
-import NotSupportedBrowserMessage from "./components/NotSupportedBrowserMessage.vue";
+import NotSupportMessage from "./components/NotSupportMessage.vue";
 
 const VIEW_SIZE = 128;
 
@@ -51,7 +51,7 @@ export default defineComponent({
     FilterGallery,
     GitTag,
     Footer,
-    NotSupportedBrowserMessage,
+    NotSupportMessage,
   },
   setup() {
     const { paths, text, transforms, fontType, loading } = useSvgPath(

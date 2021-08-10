@@ -1,7 +1,7 @@
 <template>
-  <article class="message is-danger">
+  <article class="message is-warning">
     <div class="message-header">
-      <p>⚠️ Not supported browser</p>
+      <p>⚠️ Your browser does not support</p>
     </div>
     <div class="message-body">
       Sorry. This app only supports the latest Chrome browser. Please try again
@@ -14,6 +14,7 @@
 import { defineComponent } from "@vue/runtime-core";
 
 export default defineComponent({
+  name: "NotSupportMessage",
   setup() {
     return {};
   },
