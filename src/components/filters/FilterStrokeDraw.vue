@@ -6,6 +6,7 @@
     :width="viewBoxSize"
     :height="viewBoxSize"
   >
+    <rect width="100%" height="100%" fill="#fff" />
     <path
       v-for="(p, i) in paths"
       :key="i"
@@ -16,7 +17,6 @@
       fill="transparent"
       :d="p"
     >
-      <rect width="100%" height="100%" fill="#fff" />
       <animate
         attributeName="stroke-dashoffset"
         from="1000"
