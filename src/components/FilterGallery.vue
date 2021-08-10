@@ -51,6 +51,7 @@ import FilterScale from "./filters/FilterScale.vue";
 import FilterRotate from "./filters/FilterRotate.vue";
 import { convertGifAndSave } from "../core/saveImage";
 import RiDownload2Fill from "./icons/RiDownload2Fill.vue";
+import { event } from "vue-gtag";
 
 export default defineComponent({
   name: "FilterGallery",
@@ -110,12 +111,18 @@ export default defineComponent({
     ];
 
     const onDownload = async (
-      event: any, // FIXME
+      e: any, // FIXME
       svgElmId: string
     ) => {
-      event.target.classList.add("is-loading");
+      e.target.classList.add("is-loading");
       await convertGifAndSave(svgElmId, props.text);
-      event.target.classList.remove("is-loading");
+      e.target.classList.remove("is-loading");
+
+      event("download-gif", {
+        filterType: svgElmId,
+        text: props.text,
+        color: props.color,
+      });
     };
 
     return {

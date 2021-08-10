@@ -10,11 +10,13 @@ import { defineComponent } from "vue";
 import GITHUB_ICON from "../../public/github-logo.png";
 
 const GITHUB_REPO = "https://github.com/kawamataryo/animated-emoji-gen";
+import { event } from "vue-gtag";
 
 export default defineComponent({
   name: "GitTag",
   setup() {
     const openGithub = () => {
+      event("click-repository-link");
       window.open(GITHUB_REPO);
     };
     return {

@@ -23,6 +23,7 @@
     "sass": "^1.37.5",
     "text-to-svg": "^3.1.5",
     "vue": "^3.0.5",
+    "vue-gtag": "^2.0.1",
     "vue3-colorpicker": "^1.0.5"
   },
   "devDependencies": {
