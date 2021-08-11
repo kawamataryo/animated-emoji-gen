@@ -1,7 +1,7 @@
 import { computed, onMounted, ref } from "vue";
 import { Font, load } from "opentype.js";
 
-type FontType = {
+type Fonts = {
   serif: {
     bold: Font | null;
     light: Font | null;
@@ -12,6 +12,11 @@ type FontType = {
     light: Font | null;
     medium: Font | null;
   };
+};
+
+type FontType = {
+  family: keyof Fonts;
+  weight: keyof Fonts["sans"];
 };
 
 const initialFonts = {
@@ -29,16 +34,14 @@ const initialFonts = {
 
 export const useGenerateFontPath = (initialText: string, viewSize: number) => {
   const text = ref(initialText);
-  const fonts = ref<FontType>(initialFonts);
-  const fontType = ref<{ family: string; weight: string }>({
+  const fonts = ref<Fonts>(initialFonts);
+  const fontType = ref<FontType>({
     family: "sans",
     weight: "bold",
   });
 
   const font = computed(
-    () =>
-      // @ts-ignore TODO
-      fonts.value[fontType.value.family][fontType.value.weight] as Font | null
+    () => fonts.value[fontType.value.family][fontType.value.weight]
   );
 
   const rows = computed(() => {
