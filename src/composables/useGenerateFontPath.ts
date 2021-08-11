@@ -87,11 +87,15 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
   const loading = ref(true);
 
   const loadFonts = async () => {
+    // Load initial font
+    fonts.value.sans.bold = await load("/fonts/NotoSansJP-Black.otf");
+    loading.value = false;
+
+    // Load other fonts
     const loadedFonts = await Promise.all([
       load("/fonts/NotoSerifJP-Black.otf"),
       load("/fonts/NotoSerifJP-Light.otf"),
       load("/fonts/NotoSerifJP-Medium.otf"),
-      load("/fonts/NotoSansJP-Black.otf"),
       load("/fonts/NotoSansJP-Light.otf"),
       load("/fonts/NotoSansJP-Medium.otf"),
     ]);
@@ -102,17 +106,15 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
         medium: loadedFonts[2],
       },
       sans: {
-        bold: loadedFonts[3],
-        light: loadedFonts[4],
-        medium: loadedFonts[5],
+        bold: fonts.value.sans.bold,
+        light: loadedFonts[3],
+        medium: loadedFonts[4],
       },
     };
-
-    loading.value = false;
   };
 
   onMounted(async () => {
-    loadFonts();
+    await loadFonts();
   });
 
   return {
