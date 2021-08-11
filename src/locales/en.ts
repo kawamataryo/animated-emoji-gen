@@ -8,8 +8,8 @@ export const enMessages = {
   labels: {
     text: "text",
     color: "color",
-    fontFamily: "fontFamily",
-    fontWeight: "fontWeight",
+    fontFamily: "font family",
+    fontWeight: "font weight",
     background: "background color",
   },
   selectButtonsOption: {
