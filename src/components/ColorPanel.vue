@@ -9,15 +9,12 @@
       @click="changeColor(c)"
     ></div>
   </div>
-  <label class="label is-size-7"
-    >custom
-    <input
-      type="color"
-      class="input-color"
-      :value="color"
-      @input="changeInputColor"
-    />
-  </label>
+  <input
+    type="color"
+    class="input-color"
+    :value="color"
+    @input="changeInputColor"
+  />
 </template>
 
 <script lang="ts">
