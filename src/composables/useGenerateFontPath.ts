@@ -106,9 +106,9 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
         bold: result.serif.bold,
       },
       sans: {
-        light: result.serif.light,
-        medium: result.serif.medium,
-        bold: result.serif.bold,
+        light: result.sans.light,
+        medium: result.sans.medium,
+        bold: result.sans.bold,
       },
     };
   };
