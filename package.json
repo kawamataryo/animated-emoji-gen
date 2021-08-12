@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "serve": "vite preview",
+    "type:check": "vue-tsc --noEmit",
     "lint:fix": "eslint --fix 'src/**/*.{js,ts,vue}'",
     "format": "prettier 'src/**/*.{js,ts,vue}'",
     "format:fix": "prettier --write 'src/**/*.{js,ts,vue}'",
