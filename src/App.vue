@@ -31,7 +31,7 @@ export default defineComponent({
   },
   setup() {
     const isNotSupportedBrowser = ref(false);
-    const { locale } = useI18n({ useScope: "global" });
+    const { locale } = useI18n();
 
     onMounted(() => {
       const browser = detect();

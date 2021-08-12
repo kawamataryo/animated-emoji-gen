@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, watch } from "vue";
+import { defineComponent, ref, watch } from "vue";
 import ParametersForm from "../components/ParametersForm.vue";
 import { COLORS } from "../utils/constants";
 import FilterGallery from "../components/FilterGallery.vue";
@@ -56,7 +56,7 @@ export default defineComponent({
     const color = ref(COLORS[0]);
     const backgroundColor = ref("transparent");
 
-    const { locale } = useI18n({ useScope: "global" });
+    const { locale } = useI18n();
 
     watch(
       locale,

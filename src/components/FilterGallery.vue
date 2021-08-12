@@ -99,6 +99,8 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { t } = useI18n();
+
     const filterComponents = [
       "FilterNormal",
       "FilterShadow",
@@ -131,8 +133,6 @@ export default defineComponent({
         color: props.color,
       });
     };
-
-    const { t } = useI18n();
 
     return {
       t,
