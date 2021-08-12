@@ -5,6 +5,10 @@ export const jaMessages = {
       "申し訳ございません。このアプリは最新のChromeブラウザのみで動作します。Chromeブラウザに切り替えてご利用ください。",
     download: "ダウンロード",
   },
+  language: {
+    en: "English",
+    ja: "日本語",
+  },
   labels: {
     text: "テキスト",
     color: "カラー",

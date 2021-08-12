@@ -5,6 +5,10 @@ export const enMessages = {
       "Sorry. This app only supports the latest Chrome browser. Please try again with Chrome browser",
     download: "Download",
   },
+  language: {
+    en: "English",
+    ja: "日本語",
+  },
   labels: {
     text: "text",
     color: "color",

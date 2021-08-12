@@ -1,6 +1,7 @@
 <template>
   <GitTag />
   <div class="container">
+    <LanguageSelect v-model="locale" />
     <template v-if="isNotSupportedBrowser">
       <NotSupportMessage />
     </template>
@@ -16,6 +17,8 @@ import MainPage from "./pages/MainPage.vue";
 import Footer from "./components/Footer.vue";
 import NotSupportMessage from "./components/NotSupportMessage.vue";
 import { detect } from "detect-browser";
+import { useI18n } from "vue-i18n";
+import LanguageSelect from "./components/LanguageSelect.vue";
 
 export default defineComponent({
   name: "App",
@@ -24,9 +27,11 @@ export default defineComponent({
     MainPage,
     Footer,
     NotSupportMessage,
+    LanguageSelect,
   },
   setup() {
     const isNotSupportedBrowser = ref(false);
+    const { locale } = useI18n({ useScope: "global" });
 
     onMounted(() => {
       const browser = detect();
@@ -37,6 +42,7 @@ export default defineComponent({
 
     return {
       isNotSupportedBrowser,
+      locale,
     };
   },
 });

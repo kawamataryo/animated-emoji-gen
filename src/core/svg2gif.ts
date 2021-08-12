@@ -48,7 +48,6 @@ export class Svg2Gif {
   async render(onProgress?: (progress: number) => void): Promise<Blob> {
     return await new Promise<Blob>((resolve, reject) => {
       this.encoder.on("finished", (blob) => {
-        console.log("render finished", blob);
         resolve(blob);
       });
       this.encoder.on("abort", () => reject(new Error("aborted")));

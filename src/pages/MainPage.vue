@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, ref, watch } from "vue";
 import ParametersForm from "../components/ParametersForm.vue";
 import { COLORS } from "../utils/constants";
 import FilterGallery from "../components/FilterGallery.vue";
@@ -37,6 +37,7 @@ import Loading from "../components/Loading.vue";
 import TwitterShareButton from "../components/TwitterShareButton.vue";
 import { useGenerateFontPath } from "../composables/useGenerateFontPath";
 import HatenaBookmarkButton from "../components/HatenaBookmarkButton.vue";
+import { useI18n } from "vue-i18n";
 
 const VIEW_SIZE = 128;
 
@@ -50,12 +51,24 @@ export default defineComponent({
     HatenaBookmarkButton,
   },
   setup() {
-    const { paths, text, transforms, fontType, loading } = useGenerateFontPath(
-      "Emoji",
-      VIEW_SIZE
-    );
+    const { paths, text, transforms, fontType, loading, loadFonts } =
+      useGenerateFontPath("Emoji", VIEW_SIZE);
     const color = ref(COLORS[0]);
     const backgroundColor = ref("transparent");
+
+    const { locale } = useI18n({ useScope: "global" });
+
+    watch(
+      locale,
+      async (l) => {
+        // FIXME
+        // l の型推論はWritableComputedRef<T>だが、実際にはrefでwrapされない生のstringが渡ってきている
+        await loadFonts(l as unknown as string);
+      },
+      {
+        immediate: true,
+      }
+    );
 
     return {
       paths,

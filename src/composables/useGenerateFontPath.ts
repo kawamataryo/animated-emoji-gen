@@ -1,5 +1,6 @@
-import { computed, onMounted, ref } from "vue";
-import { Font, load } from "opentype.js";
+import { computed, ref } from "vue";
+import { Font } from "opentype.js";
+import { FontClient } from "../utils/loadFonts";
 
 type Fonts = {
   serif: {
@@ -89,42 +90,36 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
 
   const loading = ref(true);
 
-  const loadFonts = async () => {
+  const loadFonts = async (locale: string) => {
+    const fontClient = new FontClient(locale);
     // Load initial font
-    fonts.value.sans.bold = await load("/fonts/NotoSansJP-Black.otf");
+    loading.value = true;
+    fonts.value.sans.bold = await fontClient.loadFont("sans", "bold");
     loading.value = false;
 
     // Load other fonts
-    const loadedFonts = await Promise.all([
-      load("/fonts/NotoSerifJP-Black.otf"),
-      load("/fonts/NotoSerifJP-Light.otf"),
-      load("/fonts/NotoSerifJP-Medium.otf"),
-      load("/fonts/NotoSansJP-Light.otf"),
-      load("/fonts/NotoSansJP-Medium.otf"),
-    ]);
+    const result = await fontClient.loadAllFonts();
     fonts.value = {
       serif: {
-        bold: loadedFonts[0],
-        light: loadedFonts[1],
-        medium: loadedFonts[2],
+        light: result.serif.light,
+        medium: result.serif.medium,
+        bold: result.serif.bold,
       },
       sans: {
-        bold: fonts.value.sans.bold,
-        light: loadedFonts[3],
-        medium: loadedFonts[4],
+        light: result.serif.light,
+        medium: result.serif.medium,
+        bold: result.serif.bold,
       },
     };
   };
 
-  onMounted(async () => {
-    await loadFonts();
-  });
-
   return {
+    fonts,
     paths,
     fontType,
     text,
     transforms,
     loading,
+    loadFonts,
   };
 };
