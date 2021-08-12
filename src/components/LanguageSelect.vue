@@ -42,10 +42,10 @@ export default defineComponent({
   },
   emits: ["update:modelValue"],
   setup(_, ctx) {
+    const { t } = useI18n();
     const changeLocale = (locale: string) => {
       ctx.emit("update:modelValue", locale);
     };
-    const { t } = useI18n();
     return {
       t,
       changeLocale,

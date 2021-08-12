@@ -7,8 +7,8 @@
     "serve": "vite preview",
     "type:check": "vue-tsc --noEmit",
     "lint:fix": "eslint --fix 'src/**/*.{js,ts,vue}'",
-    "format": "prettier 'src/**/*.{js,ts,vue}'",
-    "format:fix": "prettier --write 'src/**/*.{js,ts,vue}'",
+    "format": "prettier 'src/**/*.{js,ts,vue,json}'",
+    "format:fix": "prettier --write 'src/**/*.{js,ts,vue,json}'",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -26,10 +26,11 @@
     "text-to-svg": "^3.1.5",
     "vue": "^3.0.5",
     "vue-gtag": "^2.0.1",
-    "vue-i18n": "^9.1.7",
+    "vue-i18n": "^9.2.0-beta.2",
     "vue3-colorpicker": "^1.0.5"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^2.4.0",
     "@types/text-to-svg": "^3.1.1",
     "@typescript-eslint/eslint-plugin": "4.29.0",
     "@typescript-eslint/parser": "4.29.0",

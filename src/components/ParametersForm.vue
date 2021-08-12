@@ -110,6 +110,8 @@ export default defineComponent({
     "update:backgroundColor",
   ],
   setup(props, ctx) {
+    const { t } = useI18n();
+
     const inputText = computed({
       get: () => props.text,
       set: (val) => {
@@ -123,8 +125,6 @@ export default defineComponent({
         ctx.emit("update:color", val);
       },
     });
-
-    const { t } = useI18n();
 
     const fontFamilyOptions = [
       { label: t("selectButtonsOption.fontFamily.serif"), value: "serif" },
