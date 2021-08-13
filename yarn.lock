@@ -613,7 +613,7 @@
     "@vue/compiler-core" "3.2.2"
     "@vue/shared" "3.2.2"
 
-"@vue/compiler-sfc@^3.0.5", "@vue/compiler-sfc@^3.2.1":
+"@vue/compiler-sfc@3.2.2", "@vue/compiler-sfc@^3.2.1":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.2.2.tgz#5b7b13b07689be8e4880d856f72d1be500785be9"
   integrity sha512-hrtqpQ5L6IPn5v7yVRo7uvLcQxv0z1+KBjZBWMBOcrXz4t+PKUxU/SWd6Tl9T8FDmYlunzKUh6lcx+2CLo6f5A==
@@ -3410,7 +3410,7 @@ vue3-storage@^0.1.9:
     vue-class-component "^8.0.0-0"
     vue-router "^4.0.0-0"
 
-vue@^3.0.0, vue@^3.0.11, vue@^3.0.5:
+vue@3.2.2, vue@^3.0.0, vue@^3.0.11:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.2.tgz#11715cb71a02baefd0f6e6552dc623680eb1bf32"
   integrity sha512-D/LuzAV30CgNJYGyNheE/VUs5N4toL2IgmS6c9qeOxvyh0xyn4exyRqizpXIrsvfx34zG9x5gCI2tdRHCGvF9w==
