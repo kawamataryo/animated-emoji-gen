@@ -1,10 +1,10 @@
 <template>
   <GitTag />
   <div class="container">
-    <LanguageSelect v-model="locale" />
     <template v-if="isNotSupportedBrowser">
       <NotSupportMessage />
     </template>
+    <LanguageSelect v-model="locale" class="mt-2" />
     <MainPage />
   </div>
   <Footer />
