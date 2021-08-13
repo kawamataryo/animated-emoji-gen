@@ -12,7 +12,7 @@
     "text": "text",
     "color": "color",
     "fontFamily": "font family",
-    "fontWeight": "font weight",
+    "fontWeight": "font type",
     "background": "background color"
   },
   "selectButtonsOption": {
@@ -22,8 +22,8 @@
     },
     "fontWeight": {
       "bold": "bold",
-      "medium": "medium",
-      "light": "light"
+      "medium": "regular",
+      "light": "italic"
     },
     "background": {
       "transparent": "transparent",
