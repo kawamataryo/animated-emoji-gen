@@ -126,10 +126,10 @@ export default defineComponent({
       },
     });
 
-    const fontFamilyOptions = [
+    const fontFamilyOptions = computed(() => [
       { label: t("selectButtonsOption.fontFamily.serif"), value: "serif" },
       { label: t("selectButtonsOption.fontFamily.sans"), value: "sans" },
-    ];
+    ]);
 
     const inputFontFamily = computed({
       get: () => props.fontFamily,
@@ -138,11 +138,11 @@ export default defineComponent({
       },
     });
 
-    const fontWeightOptions = [
+    const fontWeightOptions = computed(() => [
       { label: t("selectButtonsOption.fontWeight.bold"), value: "bold" },
       { label: t("selectButtonsOption.fontWeight.medium"), value: "medium" },
       { label: t("selectButtonsOption.fontWeight.light"), value: "light" },
-    ];
+    ]);
 
     const inputFontWeight = computed({
       get: () => props.fontWeight,
@@ -151,14 +151,14 @@ export default defineComponent({
       },
     });
 
-    const backgroundOptions = [
+    const backgroundOptions = computed(() => [
       {
         label: t("selectButtonsOption.background.transparent"),
         value: "transparent",
       },
       { label: t("selectButtonsOption.background.white"), value: "#fff" },
       { label: t("selectButtonsOption.background.black"), value: "#000" },
-    ];
+    ]);
 
     const inputBackground = computed({
       get: () => props.backgroundColor,
