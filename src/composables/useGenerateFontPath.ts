@@ -54,8 +54,10 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
       return [""];
     }
     return rows.value.map((t, i) => {
-      const y = (textSize.value[i].height - 12) * (i + 1);
-      return font.value!.getPath(t, 5, y, viewSize).toPathData(2);
+      const height =
+        i === 0 ? textSize.value[i].height - 12 : textSize.value[i].height - 4;
+      const baseLine = height * (i + 1);
+      return font.value!.getPath(t, 5, baseLine, viewSize).toPathData(2);
     });
   });
 
@@ -82,7 +84,7 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
       return ["scale(1,1)"];
     }
     return rows.value.map((t, i) => {
-      const xScale = viewSize / (textSize.value[i].width + 5);
+      const xScale = viewSize / (textSize.value[i].width + 8);
       const yScale = viewSize / textSize.value[i].height / rows.value.length;
       return `scale(${xScale}, ${yScale})`;
     });
