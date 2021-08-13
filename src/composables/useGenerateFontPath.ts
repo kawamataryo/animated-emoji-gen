@@ -55,7 +55,7 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
     }
     return rows.value.map((t, i) => {
       const y = (textSize.value[i].height - 12) * (i + 1);
-      return font.value!.getPath(t, 0, y, viewSize).toPathData(2);
+      return font.value!.getPath(t, 5, y, viewSize).toPathData(2);
     });
   });
 
@@ -71,8 +71,8 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
         .getPath(t, 0, 0, viewSize)
         .getBoundingBox();
       return {
-        width: x2 - x1 + 12.8,
-        height: y2 - y1 + 12.8,
+        width: x2 - x1 + 20.8,
+        height: y2 - y1 + 20.8,
       };
     });
   });
@@ -82,7 +82,7 @@ export const useGenerateFontPath = (initialText: string, viewSize: number) => {
       return ["scale(1,1)"];
     }
     return rows.value.map((t, i) => {
-      const xScale = viewSize / textSize.value[i].width;
+      const xScale = viewSize / (textSize.value[i].width + 5);
       const yScale = viewSize / textSize.value[i].height / rows.value.length;
       return `scale(${xScale}, ${yScale})`;
     });
