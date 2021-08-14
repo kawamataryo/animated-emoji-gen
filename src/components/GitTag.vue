@@ -1,6 +1,6 @@
 <template>
   <div class="fork__tag" @click="openGithub">
-    <img :src="githubIcon" class="github__icon" />
+    <img :src="githubIcon" class="github__icon" alt="github icon" />
     <div class="fork__description">Code is here!</div>
   </div>
 </template>
