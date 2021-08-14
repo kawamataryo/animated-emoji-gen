@@ -13,7 +13,8 @@
     "color": "カラー",
     "fontFamily": "フォント",
     "fontWeight": "太さ",
-    "background": "出力画像の背景色"
+    "background": "出力画像の背景色",
+    "colorPicker": "カラーピッカー"
   },
   "selectButtonsOption": {
     "fontFamily": {

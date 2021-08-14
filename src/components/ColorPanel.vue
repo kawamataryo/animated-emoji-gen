@@ -9,7 +9,11 @@
       @click="changeColor(c)"
     ></div>
   </div>
+  <label for="input-color" class="visually-hidden">
+    {{ t("labels.colorPicker") }}
+  </label>
   <input
+    id="input-color"
     type="color"
     class="input-color"
     :value="color"
@@ -19,6 +23,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/runtime-core";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   props: {
@@ -33,6 +38,8 @@ export default defineComponent({
   },
   emits: ["update:color"],
   setup(_, ctx) {
+    const { t } = useI18n();
+
     const changeInputColor = (e: any) => {
       changeColor(e.target.value);
     };
@@ -41,6 +48,7 @@ export default defineComponent({
       ctx.emit("update:color", color);
     };
     return {
+      t,
       changeColor,
       changeInputColor,
     };
@@ -70,5 +78,20 @@ export default defineComponent({
 
 .input-color {
   margin-top: 10px;
+}
+
+.visually-hidden {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  opacity: 0;
+  overflow: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  visibility: visible;
 }
 </style>

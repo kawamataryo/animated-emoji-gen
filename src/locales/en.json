@@ -13,7 +13,8 @@
     "color": "color",
     "fontFamily": "font family",
     "fontWeight": "font type",
-    "background": "background color"
+    "background": "background color",
+    "colorPicker": "color picker"
   },
   "selectButtonsOption": {
     "fontFamily": {
