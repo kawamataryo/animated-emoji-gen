@@ -12,8 +12,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@commitlint/cli": "16.2.3",
-    "@commitlint/config-conventional": "16.2.1",
+    "@commitlint/cli": "16.2.4",
+    "@commitlint/config-conventional": "16.2.4",
     "@types/gif.js": "0.2.2",
     "bulma": "0.9.3",
     "canvg": "4.0.0",
