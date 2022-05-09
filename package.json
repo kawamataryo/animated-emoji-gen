@@ -32,8 +32,8 @@
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "2.4.0",
     "@types/text-to-svg": "3.1.1",
-    "@typescript-eslint/eslint-plugin": "5.22.0",
-    "@typescript-eslint/parser": "5.22.0",
+    "@typescript-eslint/eslint-plugin": "5.23.0",
+    "@typescript-eslint/parser": "5.23.0",
     "@vitejs/plugin-vue": "2.3.2",
     "@vue/compiler-sfc": "3.2.33",
     "eslint": "8.15.0",
