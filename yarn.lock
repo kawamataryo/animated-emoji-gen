@@ -275,24 +275,32 @@
     source-map "0.6.1"
     yaml-eslint-parser "^0.3.2"
 
-"@intlify/core-base@9.2.0-beta.37":
-  version "9.2.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@intlify/core-base/-/core-base-9.2.0-beta.37.tgz#1ad69384b0aa336382030f60d03a6db3fc06cbb7"
-  integrity sha512-dffL15tuB1I66CFVTt2Yy2IeagMYi/sm5eGnSfSEm2E5BaNOEgLaF/gVzmur2iJ7qguSWHJyJ2LZP11mWkz2nw==
+"@intlify/core-base@9.2.0-beta.38":
+  version "9.2.0-beta.38"
+  resolved "https://registry.yarnpkg.com/@intlify/core-base/-/core-base-9.2.0-beta.38.tgz#e122e797af5ae09ec528c89f64ce94eea656b641"
+  integrity sha512-A+7X60yUzowA6azsJGI54KibPu94lGIuOwLhX0M9+EhvQU3S7Ghinh793V9AsSEMEsOLd5i9RVpl+UHSxCibkw==
   dependencies:
-    "@intlify/devtools-if" "9.2.0-beta.37"
-    "@intlify/message-compiler" "9.2.0-beta.37"
-    "@intlify/shared" "9.2.0-beta.37"
-    "@intlify/vue-devtools" "9.2.0-beta.37"
+    "@intlify/devtools-if" "9.2.0-beta.38"
+    "@intlify/message-compiler" "9.2.0-beta.38"
+    "@intlify/shared" "9.2.0-beta.38"
+    "@intlify/vue-devtools" "9.2.0-beta.38"
 
-"@intlify/devtools-if@9.2.0-beta.37":
-  version "9.2.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@intlify/devtools-if/-/devtools-if-9.2.0-beta.37.tgz#5e3948f36b81c04a91d06d7ebe3d7c9963f4a8b7"
-  integrity sha512-jQywotLmpUzRMUSJIDhU562PUSMa+qFgIddzGZL7YdCiZtmb7rmgKbntQYhGZIo/8CtGdKEMyH2JUgo180JbhA==
+"@intlify/devtools-if@9.2.0-beta.38":
+  version "9.2.0-beta.38"
+  resolved "https://registry.yarnpkg.com/@intlify/devtools-if/-/devtools-if-9.2.0-beta.38.tgz#116f2f36ab85718f775a320715fddd8091683065"
+  integrity sha512-I8dOqU84s6sAnpoCXm6DcoM+n6NGKF8MQFu/we33Dsji5ckBhGFLT0oM4xEWOp9sI5ECsmiX9fgSkTGAGMJl0g==
   dependencies:
-    "@intlify/shared" "9.2.0-beta.37"
+    "@intlify/shared" "9.2.0-beta.38"
 
-"@intlify/message-compiler@9.2.0-beta.37", "@intlify/message-compiler@next":
+"@intlify/message-compiler@9.2.0-beta.38":
+  version "9.2.0-beta.38"
+  resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-9.2.0-beta.38.tgz#5b75057b39b02e3b7fc5e3bbd312c2fdbbd96ba5"
+  integrity sha512-jUoQExjvFDOUdKDL+k4AzACfx8LXSRftSCQnV3I/DNcvwRDcf5fdb5mhYwYspQp0WtWNqSTTz/cC5Ia1Hyjiuw==
+  dependencies:
+    "@intlify/shared" "9.2.0-beta.38"
+    source-map "0.6.1"
+
+"@intlify/message-compiler@next":
   version "9.2.0-beta.37"
   resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-9.2.0-beta.37.tgz#4d1f5ddafb85abdf85bdb21efc35882eacdc6c12"
   integrity sha512-7V5bJ5b5OqYTOa+Pfl4ugB6p/16yB4R/37i5vIaPzNW3Lhg8hdNoo+mtLPp1VKs1zmgpSjYi/rvDobGkHJvr2g==
@@ -304,6 +312,11 @@
   version "9.2.0-beta.37"
   resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-9.2.0-beta.37.tgz#361de13490bbcf57a0359c2ac7d4773db0c8247c"
   integrity sha512-TVh69KwsY1A4Vo/ODJEp9NPW9O6zO1id4hwohaMdcibPdTp9ieX00QU9OiPRJ8Iz6W6A9xjU0Q30RAX1ba4+5g==
+
+"@intlify/shared@9.2.0-beta.38":
+  version "9.2.0-beta.38"
+  resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-9.2.0-beta.38.tgz#f64356aa398f17939061e5265225e73e16844c98"
+  integrity sha512-FPb41WXXOH259ku6hHVQVyYKR6ictKNC4ZZBZg8hknwd06nREuRAHMDMNm8++YfAPUEeRYq2I6F424myvhjuxA==
 
 "@intlify/vite-plugin-vue-i18n@5.0.0":
   version "5.0.0"
@@ -317,13 +330,13 @@
     fast-glob "^3.2.5"
     source-map "0.6.1"
 
-"@intlify/vue-devtools@9.2.0-beta.37":
-  version "9.2.0-beta.37"
-  resolved "https://registry.yarnpkg.com/@intlify/vue-devtools/-/vue-devtools-9.2.0-beta.37.tgz#e511604a43dafe22dcea21b92029549104ded044"
-  integrity sha512-aKhqWp6falSk4loLq0RC1sgcYaIX1jEbGuyL+l4Vc5++tbVfxafMGdT6X33GSWgUQXSF7O4D+87jIyTYOB3Tsw==
+"@intlify/vue-devtools@9.2.0-beta.38":
+  version "9.2.0-beta.38"
+  resolved "https://registry.yarnpkg.com/@intlify/vue-devtools/-/vue-devtools-9.2.0-beta.38.tgz#3ff773d93f2343622203d05ccd4526f6e3bbde7f"
+  integrity sha512-QargsZCw3OBMVcInxcNhUsPv1cR0HiulRNzuWAHgiHNmTaKVROfqSlnBEOmjMq9CXIM+Zw5yKwWa+TvRvNsO/A==
   dependencies:
-    "@intlify/core-base" "9.2.0-beta.37"
-    "@intlify/shared" "9.2.0-beta.37"
+    "@intlify/core-base" "9.2.0-beta.38"
+    "@intlify/shared" "9.2.0-beta.38"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -719,10 +732,15 @@
     "@vue/compiler-dom" "3.2.37"
     "@vue/shared" "3.2.37"
 
-"@vue/devtools-api@^6.0.0-beta.13", "@vue/devtools-api@^6.0.0-beta.14":
+"@vue/devtools-api@^6.0.0-beta.14":
   version "6.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.15.tgz#ad7cb384e062f165bcf9c83732125bffbc2ad83d"
   integrity sha512-quBx4Jjpexo6KDiNUGFr/zF/2A4srKM9S9v2uHgMXSU//hjgq1eGzqkIFql8T9gfX5ZaVOUzYBP3jIdIR3PKIA==
+
+"@vue/devtools-api@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.2.1.tgz#6f2948ff002ec46df01420dfeff91de16c5b4092"
+  integrity sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==
 
 "@vue/reactivity-transform@3.2.37":
   version "3.2.37"
@@ -3771,15 +3789,15 @@ vue-gtag@2.0.1:
   resolved "https://registry.yarnpkg.com/vue-gtag/-/vue-gtag-2.0.1.tgz#d4dc1b9cf79809c37ce844824c0f7fa97af520dd"
   integrity sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==
 
-vue-i18n@9.2.0-beta.37:
-  version "9.2.0-beta.37"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-9.2.0-beta.37.tgz#167815adfe5e44e87bf6665918bb0a8fd26a6312"
-  integrity sha512-R0YO/VhHrZHIu1MdHTgs8T0e2jaF3O1N79cvkyO1b+VkuSeo1Cxy7qDQaq+WdBZXAZENS/WPX+ELE5cZO616AQ==
+vue-i18n@9.2.0-beta.38:
+  version "9.2.0-beta.38"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-9.2.0-beta.38.tgz#c22b38902600375355f89511191fd90d51787d7c"
+  integrity sha512-afnpOuEvuYPmsc9hg8a96DvItFKIhyOA3bbdPUpOWIkCDoZIQjY7flt2TCdoWm7wxAJqNjTKJ0nlWQF6hmV6Lg==
   dependencies:
-    "@intlify/core-base" "9.2.0-beta.37"
-    "@intlify/shared" "9.2.0-beta.37"
-    "@intlify/vue-devtools" "9.2.0-beta.37"
-    "@vue/devtools-api" "^6.0.0-beta.13"
+    "@intlify/core-base" "9.2.0-beta.38"
+    "@intlify/shared" "9.2.0-beta.38"
+    "@intlify/vue-devtools" "9.2.0-beta.38"
+    "@vue/devtools-api" "^6.2.1"
 
 vue-router@^4.0.0-0:
   version "4.0.11"
