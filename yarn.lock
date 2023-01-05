@@ -3812,10 +3812,10 @@ vue3-angle@^0.1.6:
   resolved "https://registry.yarnpkg.com/vue3-angle/-/vue3-angle-0.1.6.tgz#cd99ececdb175543537d5b058319347225949cab"
   integrity sha512-XbGG4xWhbbbB4Ujj17wyy5GjfsvTQL8+P00eRj3Y2W239l1CvKGehemrr0f1+IJa+aJpHaPn4hB22ahLy67Iqw==
 
-vue3-colorpicker@2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.0.11.tgz#b0591246a747e8d3fada7f3dd27606bc69ccc74b"
-  integrity sha512-zZfZC+0nvu5YFFlGENOtPtdJKYfKHKsi1Vg/zH1Bv8e8DgSxOG2fSg/vHOxxpNVNLBtoXmDdoTtQJMEK+UYI1Q==
+vue3-colorpicker@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.1.2.tgz#fefb29040d9c0bf63a4f9c56553415dbd305325c"
+  integrity sha512-ojCug0yVj5KOxoQo4GjhLXLsQ3P+y9UdNBKWD+ZRbeuswfdVVGsiL21BmIw+fVuLmrXJ1KC2y8nyskjsViBHRA==
   dependencies:
     "@aesoper/normal-utils" "^0.1.5"
     "@popperjs/core" "^2.10.1"
