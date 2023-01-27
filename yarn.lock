@@ -2509,10 +2509,10 @@ make-error@^1.1.1:
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
-makerjs@0.17.2:
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/makerjs/-/makerjs-0.17.2.tgz#f084af65ddf8bc66ff45bc62c518d442a6da04ab"
-  integrity sha512-VPfcY8VzCgvZeaQw34D2RiBwTVeZBF1NmzMV0NtN2F21QoF5IeYiLYwohTkgACpWJlfCr80rxLWMuFIN9KexCQ==
+makerjs@0.17.3:
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/makerjs/-/makerjs-0.17.3.tgz#b595d98bec548fe691c467295f79ef9183d1cc35"
+  integrity sha512-1ACE/DYuYSXsWgKf8dVJm9YGYEkMovMHJG9U7a+iN3p/+edNDI2Mzhx7ZUETGorUOf6bHHHNxdCcPT89abNMGA==
   dependencies:
     "@danmarshall/jscad-typings" "^1.0.0"
     "@types/bezier-js" "^0.0.6"
