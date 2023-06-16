@@ -3753,15 +3753,10 @@ vue-types@^4.1.0:
   dependencies:
     is-plain-object "5.0.0"
 
-vue3-angle@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/vue3-angle/-/vue3-angle-0.1.6.tgz#cd99ececdb175543537d5b058319347225949cab"
-  integrity sha512-XbGG4xWhbbbB4Ujj17wyy5GjfsvTQL8+P00eRj3Y2W239l1CvKGehemrr0f1+IJa+aJpHaPn4hB22ahLy67Iqw==
-
-vue3-colorpicker@2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.1.4.tgz#4340fe4cdafc494a4000b3df062648d0e7709ceb"
-  integrity sha512-E39mZHC+dpmzOefgNXwkgCuflN8zqe0eQKsiyUqKfeMJCeqZ4hWKhCW8dA2W19/gqgqjfppYhQOi/2dREYRMNQ==
+vue3-colorpicker@2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.1.5.tgz#9c30ab422dbe9f2140499c028f6f82c228cb366f"
+  integrity sha512-KzTsHQTOHHyeV8KBK2yW6iuG8GpW2qc9H2ogCFMmFWoJtyvAwNucG2BvnEiNU90SXqBC6kHhB0Q3lRl6BjThJQ==
   dependencies:
     "@aesoper/normal-utils" "^0.1.5"
     "@popperjs/core" "^2.11.8"
@@ -3770,7 +3765,6 @@ vue3-colorpicker@2.1.4:
     lodash-es "^4.17.21"
     tinycolor2 "^1.4.2"
     vue-types "^4.1.0"
-    vue3-angle "^0.1.6"
 
 vue@3.3.4:
   version "3.3.4"
