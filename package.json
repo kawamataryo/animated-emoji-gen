@@ -27,7 +27,7 @@
     "vue": "3.3.4",
     "vue-gtag": "2.0.1",
     "vue-i18n": "9.2.2",
-    "vue3-colorpicker": "2.1.4"
+    "vue3-colorpicker": "2.1.5"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "6.0.3",
