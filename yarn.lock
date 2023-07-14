@@ -3758,10 +3758,10 @@ vue-types@^4.1.0:
   dependencies:
     is-plain-object "5.0.0"
 
-vue3-colorpicker@2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.1.5.tgz#9c30ab422dbe9f2140499c028f6f82c228cb366f"
-  integrity sha512-KzTsHQTOHHyeV8KBK2yW6iuG8GpW2qc9H2ogCFMmFWoJtyvAwNucG2BvnEiNU90SXqBC6kHhB0Q3lRl6BjThJQ==
+vue3-colorpicker@2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.1.6.tgz#323999c3cd72b7bc23036454ef58074751d81309"
+  integrity sha512-9ejK/WjPnwo7itDKl7gajdlKzFoCMx2Z9CQJo26t6DtpE5Lz7FQXf+EfQUyKJB+/ahI39JvYLNAiLQCiXkNU4A==
   dependencies:
     "@aesoper/normal-utils" "^0.1.5"
     "@popperjs/core" "^2.11.8"
