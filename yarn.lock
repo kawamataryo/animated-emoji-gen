@@ -3782,10 +3782,10 @@ vue-types@^4.1.0:
   dependencies:
     is-plain-object "5.0.0"
 
-vue3-colorpicker@2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.1.6.tgz#323999c3cd72b7bc23036454ef58074751d81309"
-  integrity sha512-9ejK/WjPnwo7itDKl7gajdlKzFoCMx2Z9CQJo26t6DtpE5Lz7FQXf+EfQUyKJB+/ahI39JvYLNAiLQCiXkNU4A==
+vue3-colorpicker@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vue3-colorpicker/-/vue3-colorpicker-2.2.0.tgz#d799c9137949680e143645259dd0cc76e67da807"
+  integrity sha512-MXuydHC4+f3YJMIP3UC02m8P5gB0VTTrO5D2NkQhT+24esOvAlx7Palf/dn67CjpzO46kWbuS1REKQJohtSLCw==
   dependencies:
     "@aesoper/normal-utils" "^0.1.5"
     "@popperjs/core" "^2.11.8"
@@ -3793,9 +3793,10 @@ vue3-colorpicker@2.1.6:
     gradient-parser "^1.0.2"
     lodash-es "^4.17.21"
     tinycolor2 "^1.4.2"
+    vue "^3.3.4"
     vue-types "^4.1.0"
 
-vue@3.3.4:
+vue@3.3.4, vue@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.3.4.tgz#8ed945d3873667df1d0fcf3b2463ada028f88bd6"
   integrity sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==
