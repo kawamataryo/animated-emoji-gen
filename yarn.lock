@@ -572,10 +572,17 @@
   resolved "https://registry.yarnpkg.com/@types/bezier-js/-/bezier-js-0.0.6.tgz#0d976d68163c4955332ef798a21a0b3d6381d12b"
   integrity sha1-DZdtaBY8SVUzLveYohoLPWOB0Ss=
 
-"@types/gif.js@0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@types/gif.js/-/gif.js-0.2.2.tgz#fff36a07adc896d941dac00953a4e6ab6ca7f6cc"
-  integrity sha512-/FVEOmcoK/mdNVIW87k8A0vBC5MxBCb1Tgw57FfPBzPS12JW8jrI8qwX9pT3e1iawtIurQm34x6jY1N2awM7hQ==
+"@types/events@*":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.3.tgz#a8ef894305af28d1fc6d2dfdfc98e899591ea529"
+  integrity sha512-trOc4AAUThEz9hapPtSd7wf5tiQKvTtu5b371UxXdTuqzIh0ArcRspRP0i0Viu+LXstIQ1z96t1nsPxT9ol01g==
+
+"@types/gif.js@0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@types/gif.js/-/gif.js-0.2.5.tgz#c3c398c6d3eba4fe9385f055b41309fd1596d4f3"
+  integrity sha512-OdDQYh9v7td9ztjaooBSqjUBAyAuui2xwDDmQcyRLd6c9T0iWgkebAoCBEdEEBoZG3ekJE/6UnH63Dzq0S3bvw==
+  dependencies:
+    "@types/events" "*"
 
 "@types/json-schema@^7.0.9":
   version "7.0.9"
