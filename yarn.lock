@@ -639,10 +639,10 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.3.12.tgz#920447fdd78d76b19de0438b7f60df3c4a80bf1c"
   integrity sha512-WwA1MW0++RfXmCr12xeYOOC5baSC9mSb0ZqCquFzKhcoF4TvHu5MKOuXsncgZcpVFhB1pXd5hZmM0ryAoCp12A==
 
-"@types/text-to-svg@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@types/text-to-svg/-/text-to-svg-3.1.1.tgz#c9bec66ad69f9c80bf690f01fd799532f1ebdcac"
-  integrity sha512-7jvQ8p6amiXkuA7VXjgurnlyFGbABHOezWoDjCZu0QWMNugiI4JhJ78vZUYrfhakfHF6GwpZP5UVu7Kd9oXctg==
+"@types/text-to-svg@3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@types/text-to-svg/-/text-to-svg-3.1.4.tgz#8e5527e2ff26983a4f8ed2f3d0240a68e4972017"
+  integrity sha512-nupWR3fOC2CaakVDvnEuiNpcg+XZD8ez7yJf7HCcpR1JKqPKxnUqeFH8er9txouyCbsdwXjhKKpMPtnpQZYCsQ==
   dependencies:
     "@types/opentype.js" "*"
 
